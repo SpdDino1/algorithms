@@ -8,6 +8,7 @@ int seqCount=0;
 //global vars
 int resCount;
 int processCount;
+vector <int> alreadyAllocated;
 //...........
 
 //Global volatile Vars
@@ -56,10 +57,10 @@ void findSeq(vector <int> freeRes,vector <int> processNeeds){
 				storeProcessNeeds.push_back(processNeeds[p]);			
 			}	
 			
-			//Deallocate Resources + Update freeResource List
+			//Release Allocated Resources / Update freeResource List
 			z=0;
 			for(j=i;j<(i+resCount);j++){
-				freeRes[z] = freeRes[z]+processNeeds[j];
+				freeRes[z] = freeRes[z]+alreadyAllocated[j];
 				processNeeds[j] = 0;
 				z++;
 			}
@@ -86,31 +87,59 @@ int main(){
 	
 	//Input..................
 	vector <int> freeRes;
-	freeRes.push_back(9);//Resource 0
-	freeRes.push_back(9);//Resource 1
-	freeRes.push_back(9);//Resource 2
-	
-	vector <int> processNeeds;
-	processNeeds.push_back(7);//Process 0
-	processNeeds.push_back(4);
-	processNeeds.push_back(3);
+	freeRes.push_back(2);//Resource 0
+	freeRes.push_back(3);//Resource 1
+	freeRes.push_back(0);//Resource 2
 
-	processNeeds.push_back(0);//Process 1
-	processNeeds.push_back(2);
-	processNeeds.push_back(0);
+	vector <int> processFullDemand;
+	processFullDemand.push_back(7);//Process 0
+	processFullDemand.push_back(5);
+	processFullDemand.push_back(3);
 
-	processNeeds.push_back(6);//Process 2
-	processNeeds.push_back(0);
-	processNeeds.push_back(0);
+	processFullDemand.push_back(3);//Process 1
+	processFullDemand.push_back(2);
+	processFullDemand.push_back(2);
 
-	processNeeds.push_back(0);//Process 3
-	processNeeds.push_back(1);
-	processNeeds.push_back(1);
+	processFullDemand.push_back(9);//Process 2
+	processFullDemand.push_back(0);
+	processFullDemand.push_back(2);
 
-	processNeeds.push_back(4);//Process 4
-	processNeeds.push_back(3);
-	processNeeds.push_back(1);
+	processFullDemand.push_back(2);//Process 3
+	processFullDemand.push_back(2);
+	processFullDemand.push_back(2);
+
+	processFullDemand.push_back(4);//Process 4
+	processFullDemand.push_back(3);
+	processFullDemand.push_back(3);
+
+	//Resources already allocated to processes
+	alreadyAllocated.push_back(0);//Process 0
+	alreadyAllocated.push_back(1);
+	alreadyAllocated.push_back(0);
+
+	alreadyAllocated.push_back(3);//Process 1
+	alreadyAllocated.push_back(0);
+	alreadyAllocated.push_back(2);
+
+	alreadyAllocated.push_back(3);//Process 2
+	alreadyAllocated.push_back(0);
+	alreadyAllocated.push_back(2);
+
+	alreadyAllocated.push_back(2);//Process 3
+	alreadyAllocated.push_back(1);
+	alreadyAllocated.push_back(1);
+
+	alreadyAllocated.push_back(0);//Process 4
+	alreadyAllocated.push_back(0);
+	alreadyAllocated.push_back(2);
 	//.......................
+
+	//Calculating pending needs
+	vector <int> processNeeds;
+	for(int i=0;i<processFullDemand.size();i++){
+		processNeeds.push_back(processFullDemand[i]-alreadyAllocated[i]);
+	}
+
 
 	resCount = freeRes.size();
 	processCount = processNeeds.size()/resCount;
