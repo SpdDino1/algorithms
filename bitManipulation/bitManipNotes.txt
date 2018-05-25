@@ -1,0 +1,26 @@
+>Always use 'unsigned' int for bit manipulation. This ensures that all bitwise operators used work also on the sign bit.
+
+Negative Numbers
+
+>If you have to deal with -ve numbers, use int. But for negative numbers, >> and << operators work differently. They ignore the sign bit.
+
+no = 1000000
+no>>6 = 1111111   => The sign bit is dragged to the left
+
+no = 0011111;
+n0>>6 = 0000000	  => The sign bit is dragged to the left
+
+
+no = 1000001
+no<<3= 1001000 	  => Sign bit preserved
+
+All other operators like &, ^ and | WORK ON THE SIGN BIT ALSO!
+
+Tips & Tricks
+
+>No ^ minusOne =>Flip all the bits in the no [-ve will become +ve as sign bit will also flip (If the no were not unsigned)]
+Hence use ^ and -1 to flip
+
+>Use while(num){num>>1} to iterate through the bits of a number. Works only for unsigned and positive numbers. 
+
+> n&(n-1) => Bit string with only the rightmost bit of n set high. Hence this technique can be used to locate the position of high bits/count set bits

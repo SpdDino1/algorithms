@@ -1,0 +1,50 @@
+								Unstable Sorts
+
+>QS is not stable as the swap operation only takes into consideration the value of the element wrt pivot. 
+
+a b 10(1) d e 10(2) f g 2 i j 
+
+Now when comparing the value with pivot (Assume pivot =5), 10(1) will be swapped with 2 and will be ahead of 10(2) in the final answer
+
+>Heap Sort is not stable as once again it only takes into consideration the value of the node. For heap sort you first create a Max Heap, swap the parent node with the last leaf node and run maxHeapify() on the new parent. 
+
+						10
+				5(1)			4
+			1	    5(2)    
+
+Here 10 would be extracted and would be swapped by 5(2). Hence 5(2) will appear earlier than 5(1) in the final answer
+
+
+
+								External Sorting
+
+>This is a class of sorting algos where the dataset is much larger than RAM. Hence you can only work with parts of data at a time and aim to sort the whole.
+
+K Way Merge
+
+>This is the tournament tree algo to merge many sorted arrays into 1.
+
+External Merge sort
+
+>This is analogous to merge sort. Here you chunk up the given dataset, where each chunk can completely fit into RAM. So you sort each chunk individually and then merge all the chunks together using a k-way merge. 
+>You keep a buffer space for each array taking part in the k way merge and an output buffer to keep track of the final sorted array coming out of the merge. Each chunk may have numerous records, but only a few of them are loaded at a time to fill their respective alloted buffer space. As the buffer empties, new records are brought back in. 
+>When the output buffer is full, its result is written into disks and it is flushed.
+>This approach is a sort->merge. Works wll if only a few chunks are present and the buffer sizes are considerably large.
+
+>What if you had thousands of chunks and that forces you to keep very small buffers? So now as you do a k way merge, your buffer would frequently keep emptying and you will have to refill often. Hence the efficiency of this algo is affected by the number of reads/writes you are performing.
+>Hence here you do a tree style approach
+
+	chunk1	chunk2	chunk3	chunk4	chunk5	chunk6	chunk7	chunk8
+		chunk1			chunk2			chunk3			chunk4
+				chunk1						   chunk2
+								chunk1
+
+>Hence here you purposely add more levels and perform many 2 way merges to increase buffer size per chunk and imporve efficiency. Remember, READ WRITE >> Sorting 
+You may also perform intermediate 3 way merges or more if your RAM is large enough and performance isn't affected (instead of the above shown 2 way)
+
+External Distribution Sort
+
+>This is analogous to quicksort. Here a pivot is randomly chosen from the dataset and the dataset is split into 2 approximate halves, where the left is lesser than pivot and right greater. This is recursively done till the chunk now can be fit in RAM and sorted. 
+>Here no merging is required as naturally the left is lesser and right greater.
+
+>The swapping of elements after choosing a pivot can be done in disk itself (With pointers moving left and right), or there could be buffers in RAM that coudl store a part of the dataset. Once the buffer is exhausted (left pointer has hit buffer's right bound or right pointer has hit buffer's left bound), the next part of the dataset can be loaded.

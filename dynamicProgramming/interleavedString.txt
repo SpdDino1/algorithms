@@ -1,0 +1,5 @@
+	Logic
+
+Check if 1 string is in the interleaved text by using longest subsubsequence dp approach [Write interleaved as table row and one of the stirngs as column and start ticking if the letters match.]
+
+If the first string matches, then remove the letters that matched and check if the remaining interleaved string is the second string. If it is => String was interleaved, else not.
