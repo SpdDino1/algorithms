@@ -1,0 +1,1 @@
+Let one pointer travel one node at a time whil another travels two at a time. When the 2 at a time hits null, the normal pointer would be sitting on the mid node.

@@ -1,0 +1,9 @@
+Let's say you have 3 linked lists (Unsorted) and you are asked to find a triplet (Comprising elements from each list) that equal a given sum.
+You could run a O(n^3) solution by taking all possible solutions, but you can reduce it to O(n^2)
+
+Sort list b in asc order and list c in descending
+
+Then run a loop on unsorted A. Then start with first element of B (Least) and first of C(Greatest). If triplet>No => Reduce in C
+If triplte < No => Increase in B.
+
+Hence now you have reduced loop count to 2 => O(nlgn) + O(n^2) => O(n^2)

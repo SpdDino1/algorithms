@@ -1,0 +1,10 @@
+while(currentNode!=NULL){
+	listLength++;
+	currentNode=currentNode->nextNode;
+}
+
+Cleaner. Now you don't have to write conditions for the last node.
+
+Recursive Travel (Backward Travel)
+
+Let's say you have a->b->c->d and you want to operate on d,c,b then a. Use recursion here to do that. The termination condition would be when node->nextNode ==NULL
