@@ -1,0 +1,12 @@
+Problem
+
+Remove all nodes which don’t lie in any path with sum>= k
+
+Algorithm
+
+>Start from node and keep sending sum downward.
+>If any leaf is encountered and the sum is <k =>delete leaf and return false
+
+>Any node will first recursively call left child then right. If any one child returns true => That node is on some path with sum>k => don't
+delete.
+>If both children return false => That node is on no path with sum>k => Delete and return false

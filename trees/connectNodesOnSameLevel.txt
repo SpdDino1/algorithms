@@ -1,0 +1,34 @@
+Input Tree
+       A
+      / \
+     B   C
+    / \   \
+   D   E   F
+
+Output Tree
+       A--->NULL
+      / \
+     B-->C-->NULL
+    / \   \
+   D-->E-->F-->NULL
+
+
+>>Node Structure<<
+left
+right
+next
+data
+
+>>Algorithm<<
+
+Use the concept of divide and conquer. You can find the next connections for the current level using the next connections of the previous level.
+
+Lets say i need to compute D-->E-->F-->NULL. Iterate on the row B-->C-->NULL and find the first child that isn't NULL. If all children are NULL, terminate program.
+
+Store the location of the first child. This will be required while traversing the next row for finding next to next row.
+
+Now continue iterating through the B,C,NULL row,to perform the connection operations. Check if the first child is the left child, check if the same parent node has a right child. If yes, connect. Else keep iterating on the B,C,NULL row, checking each node's both children. Remember to keep track of the last connected node
+
+When you exhaust, point the last connected node to NULL.
+
+Recursively operate on the row containing first child.

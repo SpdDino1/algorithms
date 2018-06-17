@@ -1,0 +1,10 @@
+Problem
+
+Two nodes of a BST are swapped, correct the BST
+
+
+Algo
+
+>Store the inorder traversal of the BST in a vector. Inorder traversals are always sorted in ASC. So simply traverse throught the array and find the points that are out of order. If only one point is found => The largest element of left sub tree and root have to be swapped as they are the 2 nodes out of place.
+
+>Traverse the tree once again and swap the data elements when you encounter them

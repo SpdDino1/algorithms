@@ -1,0 +1,3 @@
+>>PostOrder alone (With null markings for null nodes) can suffice to build a tree back. Try it. 
+
+>>Refer Serializing trees in Geeks for Geeks

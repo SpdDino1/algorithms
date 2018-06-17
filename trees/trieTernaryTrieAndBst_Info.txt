@@ -1,0 +1,33 @@
+>>Trie Vs Bst<<
+
+>A balanced bst is a data structure that starts from the middle and assumes that the left is less and the right is more. Sort of like the assumption made in quicksort. Hence this is useful for finding elements from the middle
+
+>A trie is a DS that starts from one end and progresses towards the other...sort of like radix sort assumption. Hence this is useful for storing strings, dictionaries etc: A trie is helps ocnserve space by allowing you to use common prefixes to store strings and not replicate them. 
+>A standard trie has 26 child pointers for each alphabet. This helps ensure O(1) search time (Combined with the intelligent index access technique [refer trie.cpp]) but puts a huge space overhead.
+
+>A BST is more space efficient as it doesnt have 26 child pointers, however it takes longer to search for stored words (https://stackoverflow.com/questions/14042955/binary-search-tree-with-strings) Plus you can't use common prefixes in a BST....hence it's a pain to store strings.
+
+>>In a trie the search time is O(No of letters in key), but in a BST that's not necessary. You can take O(No of letters in key or more) [If i add a single letter after addding 10 huge words, my single letter will fall as a leaf => To search 1 letter i need to go down 10 nodes]
+
+
+
+
+
+
+
+
+>>Ternary Trie<<
+
+>A TTrie is a mix of a Trie's word manageability (Common prefixes) and a BST space conservation.
+
+>Here each node has 3 child pointers. Less than, equal and greater than. This is a BST's nature => Limited Pointers based on less/greater assumption. However here the less and greater aren't decided by the actual ASCII value or anything.
+
+>Refer (https://www.geeksforgeeks.org/ternary-search-tree/) diagram. Here "CAT" is a single word. Hence C,A,T have equal value and are connected by the equal child pointer. To add "BUG", from root "C", we attach "B" to the less than child pointer as "B" comes earlier than "C" in alphabetical order.
+
+>If i want to add "ACT", once again C's less than pointer will be traversed and my "A" will be added at B's less than pointer.
+
+>There might be multiple words in a single branch. For example if it added only the word "CAT" to that diagram and then wanted to add "CAP" => Only "P" would be added at CA's greater than pointer. 
+>Now if i wanted to add "CAST" =>CA already exists from "CAT". But CA's greater than points at "P" from "CAP". So P's equal to pointer will add "ST" as it holds equal value to "P" [Both are parts of second words]
+>This is similar to chaining in a hash map...
+
+>Hence compared to a trie, searching in a TTrie might take longer due to this chaining. A trie avoids chains by explicitly having 26 pointers, but this causes extreme memory overhead, which a TTrie tries to reduce. Hence there is a memory-time tradeoff. 
