@@ -1,0 +1,9 @@
+>>Algorithm
+
+>Have a stack and an array of spans. The array index corresponds to the day of stock.
+
+>Let's say you are finding span of day 9. Have a temp variable called tempSpan=1. Check the top of stack. If the stock value of the stack top is less than day 9 => 9 spans over it!
+So pop it and add add spanArray[top of stack value {Stack holds day indexes}] to it. So now day 9 carries the span of 1 + span of the top od stack.
+Keep iterating till top of stack > day 9 or stack is empty. Then simply push 9 into stack and set spanArray[9]=tempSpan. Continue to day 10.
+
+>Now day 10 will check top of stack => day 9....

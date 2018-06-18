@@ -1,0 +1,19 @@
+Refer https://www.geeksforgeeks.org/design-a-stack-that-supports-getmin-in-o1-time-and-o1-extra-space/
+
+>>Algorithm
+
+>Have a minElement int variable. 
+
+>If you find an element being pushed that is < than minElement => minElement will be changed. 
+
+		newMin - oldMin = elementToBePushed
+
+Hence the element being pushed to stack is actually less than newMin and is not the original element. Store the newMin as minElement
+
+>While popping, if the stack element being popped is less than minElement => This element had been mutated while pushing. Hence,
+
+		oldMin = newMin - elementToBePushed
+
+(or)	oldMin = currentMin - elementToBePopped
+
+>So now your oldMin will be your minElement and you proceed	

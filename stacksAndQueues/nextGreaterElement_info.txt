@@ -1,0 +1,11 @@
+Algorithm
+
+>Have an array called nextGreaterElement that stores the next greatest element for every given index.
+
+>Push first element to stack. 
+
+>Let's say your current element is element 9. Check if element 9 is greater than the element on top of the stack. If yes, set nextGreatestElement[topOfStackIndex]=currentElement and pop it off. Keep iterating below unitl either topOfStack is greater or stack is empty. In that case push the current element to stack.
+
+>If you reach the end of array, set nextGreatestElement of all stackIndexes remaining to -1
+
+>>This approach is similar to stock span problem

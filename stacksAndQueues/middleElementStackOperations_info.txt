@@ -1,0 +1,18 @@
+>>Problem
+
+How to implement a stack which will support following operations in O(1) time complexity?
+1) push() which adds an element to the top of stack.
+2) pop() which removes an element from top of stack.
+3) findMiddle() which will return middle element of the stack.
+4) deleteMiddle() which will delete the middle element.
+Push and pop are standard stack operations. 
+
+>>Algorithm
+
+>Have int varibles called headNodeIndex and midIndex. Initially headNodeIndex =-1 and midIndex=-1. Have a pointer called midPointer that
+
+>When a node is inserted, add to DLL's head and increment headNodeIndex. Check if (headNodeIndex/2)>midIndex. If yes, then increment midIndex and point midPointer to midPointer's next node
+
+>If a node is popped() then delete the last node and decrement headNodeIndex. If (headNodeIndex/2)<midIndex => make midPointer to the prev node of current midPointer.
+
+>If midNodePop(), then decrement headNodeIndex.  If (headNodeIndex/2)<midIndex => Make midPointer point to midPointer's prev node and delete midNode. Else if (headNodeIndex/2) == midIndex => Make midPointer point to midPointer's next node and delete midNode. 

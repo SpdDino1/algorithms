@@ -1,0 +1,13 @@
+Problem
+
+Sliding Window Maximum (Maximum of all subarrays of size k)
+
+Algo
+
+>>Have a heap alongside your array. 
+
+Heap building = O(n)
+Heapify = O(lg(n))
+
+So for each insertion, insert at the top and Heapify()
+For each deletion, simply delete and Heapify()

@@ -1,0 +1,1 @@
+Start stack 1 from left to right and stack 2 from right to left. This helps ensure that the complete array is used either for only stack 1, or only for stack 2 or for both.
