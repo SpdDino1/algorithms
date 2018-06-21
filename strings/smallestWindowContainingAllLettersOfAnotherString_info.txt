@@ -1,0 +1,16 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/find-the-smallest-window-in-a-string-containing-all-characters-of-another-string/
+
+>>Algorithm<<
+
+**This question has already been solved using divide and conquer**
+
+>Start scanning from beginning of string until all required letters have been captured. Have a map of the counts of all required letters. Some letters may have occured more number of times than required, but we still need them as some other letters may have not yet occured.
+Store the completeWindow start and end in the global vars.
+
+>Once you reach a completeWindow, increment start by one and update the counts of the letters the window is capturing. Check if the map still satisifies the count of all required letters. 
+	>If no, keep extending the window from the right till you once again reach a complete window. Remember to keep updating counts and once you reach a complete window, update global vars.
+	>If yes, increment one more time. [Do this process till you reach end of string]
+
+>Your global vars will contain the smallest complete window you have ever found

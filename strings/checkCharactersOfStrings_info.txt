@@ -1,0 +1,11 @@
+>>Problem<<
+
+This approach is an efficient method to compare characters between 2 strings. For wxample anagram check.
+
+>>Algo<<
+
+>Have a map<char,bool>
+
+>Iterate through the characters of string 1 and set the map[char]=true as you go.
+
+>Iterate through characters of string 2 and check if map[char]=true. If no => You have found a char that doesn't exist in string 1!

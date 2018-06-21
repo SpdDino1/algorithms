@@ -1,0 +1,17 @@
+>>Problem<<
+
+Length of the longest substring without repeating characters
+
+>>Alogirithms<<
+
+>>You could use divide and counquer to solve the problem in O(n lg(n))
+
+>>Linear Time Solution<<
+
+>Have a global variable named maxLength and a hash map<char,bool>.
+
+>Traverse the string from left to right and mark map[string[i]]=true as you go. Ensure that you mark the startIndex of the currently traversed sub string.
+>For every character check the map's value. If it is false =>This character isn't present in the current sub string =>Proceed forward.
+>If the value is true in the map => The character had been seen earlier in the sub string. Compare and update the current length with global max length sub string.
+
+>Start iterating from start index and find the character's index. As you go mark the map values for all this icharacters as false. Start the new substring from characterIndex +1 and continue with new startIndex.
