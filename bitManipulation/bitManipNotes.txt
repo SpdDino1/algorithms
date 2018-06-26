@@ -23,4 +23,4 @@ Hence use ^ and -1 to flip
 
 >Use while(num){num>>1} to iterate through the bits of a number. Works only for unsigned and positive numbers. 
 
-> n&(n-1) => Bit string with only the rightmost bit of n set high. Hence this technique can be used to locate the position of high bits/count set bits
+> n& ~(n-1) => Bit string with only the rightmost bit of n set high. Hence this technique can be used to locate the position of high bits/count set bits

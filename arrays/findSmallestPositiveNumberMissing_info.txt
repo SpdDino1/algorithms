@@ -1,0 +1,11 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/
+
+>>Algorithm<<
+
+>Segregate all negative and positive numbers in the array. Bring all positive to right an dnegative to left. You may use a quicksort sort of pointer method to do this.
+
+>Run through all positive numbers and turn the array[valueAtCurrentIndex] to negative. So if the current value is 2, set the number at array[2] to negative. 
+
+>Once done, run through the array once again and the first index position carrying a positive value is the SMALLEST positive number missing from the sequence 1 to n.

@@ -1,0 +1,20 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/
+
+>>Algorithm<<
+
+>At each element of the array, you have the option to either include it or not. So have 2 vars called inclSum and exclSum. At index 0, have inclSum=arr[0] and exclSum=0
+
+>At every array index after that, 
+	temp=exclSum
+	exclSum=max(exclsum,inclSum)
+	inclSum=arr[i]+temp
+
+	What you are doing here is,
+		>If you include the currentIndex, you also ge the old index's exclSum. 
+		>If you exclude the currentIndex, you get the old index's includeSum
+
+		>Then you have to update the current exclSum by max(oldExclSum, oldInclSum)
+
+>At the end choose max(exclSum,inclSum)

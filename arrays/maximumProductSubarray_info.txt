@@ -1,0 +1,13 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/maximum-product-subarray/
+
+>>Algorithm<<
+
+>Here 0 acts as breaks in the array. So the array is naturally divided into ranges ended by zeroes.
+
+>To compute the max product in a range, first compute the full product. If the product is +ve => This is the range's maximum. 
+Else if the product is -ve => If we remove 1 negative number, we will get a positive, greater answer...but we don't know which negative number to remove. 
+Hence we iterate through the range once again to find the smallest negative number. Then we divide our full range product with it to get the range's max product.
+
+>Keep comparing range maximums with global vars

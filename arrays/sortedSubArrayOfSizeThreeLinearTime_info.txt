@@ -1,0 +1,9 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/find-a-sorted-subsequence-of-size-3-in-linear-time/
+
+>>Algorithm<<
+
+>Create an array called 'smaller' that stores the index of an element that is smaller and on the left if the current index. To do this, start traversing from left to right and have a global var called smallest=arr[0]. If smallestIndex==currentIndex => mark smaller[currentIndex] =-1. Else, mark smaller[currentIndex]=smallestindex. Update global var if current value lesser than global.
+
+>Similarly create an array called 'greater' that stores the index of a larger number to the right of the current index. For this traverse from right to left and have another global var.

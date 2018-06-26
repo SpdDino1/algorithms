@@ -1,0 +1,13 @@
+>>Problems<<
+
+https://www.geeksforgeeks.org/find-the-number-occurring-odd-number-of-times/
+
+https://www.geeksforgeeks.org/find-the-missing-number/
+
+>>Strategy<<
+
+Let's say you are given an array of +ve numbers and are asked to find the number occuring odd number of times given that all other numbers occur even times.
+
+By XORing all elements, the final answer will be the number appearing odd times.
+
+XOR of any number even times ==0. So 1^2^3^1^2^3 =0 as all numbers appear even times. Use this trick to simplify problems!

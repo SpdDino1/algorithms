@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/9368205/given-a-number-find-the-next-higher-number-which-has-the-exact-same-set-of-digi
+
+To create the next largest number you need to swap a greater number of lower place value with a lesser number in a higher place value.
+
+>>Refer link for algo

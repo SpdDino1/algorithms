@@ -1,0 +1,11 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/stock-buy-sell/
+
+>>Algorithm<<
+
+>The idea is to buy a stock on a day [i] and keep going till the prices are increasing and sell it at the highest price (just before the prices drop again). Hence by maximizing the window, you get the most profit for that window. 
+
+>Keep doing this for all windows and you get the net max profit
+
+(eg) [12,32,100,3,12,0,233,32] ==> [12,32,100] (Profit=100-12)+ [3,12](Profit=12-3) + [0,233](Profit=233-0)

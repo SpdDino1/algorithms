@@ -1,0 +1,9 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/find-if-there-is-a-subarray-with-0-sum/
+
+>>Algorithm<<
+
+>Take for example {4, 2, -3, 1, 6}. {2,-3,1} = 0. Hence that zone contributes to a sum of zero.
+So if we were to start adding up all elements in an array from start to end, this zone would make no difference to the sum. So the sum before and after this zone would be the same. 
+>Hence if in the sum-ming process if we find that the same sum repeates [Use hashing to store pre computed sums], then we can say that a zone of sum 0 exists

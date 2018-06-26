@@ -1,0 +1,9 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/
+
+>>Algorithm<<
+
+>Make all zeroes as -1. So now the problem reduces to finding the max subarray size where sum is zero. 
+
+>This has been covered before. Have an auxillary array that stores the sum till aux[i]. Using hashing, find the max difference i and j such that aux[i] == aux[j] => The zone in between i and j contribute nothing => their subarray sum is zero. Hence the required subarray is (i+1) and j

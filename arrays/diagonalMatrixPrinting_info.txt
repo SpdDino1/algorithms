@@ -1,0 +1,11 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/zigzag-or-diagonal-traversal-of-matrix/
+
+>>Algorithm<<
+
+>Traverse the left edge of the matrix first. From row 0 till matrix's last row.
+Let's say you are in row 3 => [3,0]. Iterate such that [row--,col++] is within matrix dimensions. So from [3,0] we get [2,1],[1,2],[0,3]
+Such an iteration for every row gives you the corresponding diagonal elements
+
+>After this, traverse the bottom edge of the matrix. Here too within every iteration, iterate such that [row--,col++] is within matrix dimensions.

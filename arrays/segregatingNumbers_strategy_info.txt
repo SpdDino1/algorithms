@@ -1,0 +1,15 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/segregate-even-and-odd-numbers/
+
+>>Algorithm<<
+
+>We saw this as a subproblem when we had to find the least smallest missing number....we had to segregate negative to the right and positive to the left.
+
+>Use a left and right pointer, similar to quicksort, and segregate. If right==even and left==odd, swap and left++, right--. Else if right==even and left ==even, left++. 
+
+>>Sub Problem Breaking<<
+
+https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/
+
+>Here too you could first look out for 2's and (0,1)'s. Then you could go down and sort 0 and 1's with the same above algo

@@ -1,0 +1,15 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/trapping-rain-water/
+
+>>Algorithm<<
+
+>To trap rain in your current index, your current index should be bounded by 2 other indices with walls strictly greater than the current index.
+
+>Construct 2 arrays. One to store the tallest wall on the left of every index and to the right of every index.
+
+>Traverse the main array and for every element where largestLeft and largestRight != NULL, 
+	 waterCollected = waterCollected + min(leftLargest[i],rightLargest[i]) - arr[i]
+	 								   [ Select the min wall height - currentWallHeight ]
+
+>Min wall height is required as this is the restricting condition. And if you already have a wall, water can only collect on top of it as your wall occupies some volume

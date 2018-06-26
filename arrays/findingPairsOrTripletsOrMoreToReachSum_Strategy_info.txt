@@ -1,0 +1,23 @@
+>>Problems<<
+
+https://www.geeksforgeeks.org/find-pythagorean-triplet-in-an-unsorted-array/
+
+https://www.geeksforgeeks.org/find-a-triplet-that-sum-to-a-given-value/ 
+
+https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/
+
+All these problems ask you to find a group of numbers that reach a target sum
+
+>>Algorithm<<
+
+>You know how to find 2 elements that can reach a sum. Simply use a hash table and in O(n) it can be solved.
+
+>If 3 elements are being asked to match a sum, then start from end. Lock last element as a part of group and recursively try to find a pair that sums up to (neededSum-lastElement). 
+If it is not found => The last element cannot belong in any triplet! => Lock on to second last and recurse through [0 to secondLast-1] and so on..
+
+>If 4 elements are being asked, you just need to add one more level to your recursion. Lock last element as part of the group. Lock second last as part of group. Recurse through 0 to secondLast -1. If not found then lock onto secondLast-1 and recurse through 0 to secondLast-2. 
+So your problem breaks down to 3 layers of loops.
+
+>>Hence the strategy is to fix one element in the end and try to find pairs. Break down the problem.
+
+!>> For finding pythagorean triplet, you need to first sort the array of squares then find pairs! Here the target sum isn't given, so you need to force larger elements to the right side so that you can use smaller elements to reach the sum

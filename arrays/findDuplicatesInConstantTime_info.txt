@@ -1,0 +1,11 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/find-duplicates-in-on-time-and-constant-extra-space/
+
+>>Algorithm<<
+
+>This problem can be solved similar to finding the least positive number missing from array => Strategy used is to use elements in the array itself.
+
+>Take an array of floats. Iterate i from 0 to size. For array[i], set array[array[i]] = array[array[i]] +0.1. 
+
+>So now any element that occured twice => array[repeatingElement] will have fractional part as 0.2. Any element that occured singly will have array[singlyoccured] fractional part as 0.1. And any element that did not occur at all will have array[notOccurred] with no fractional part

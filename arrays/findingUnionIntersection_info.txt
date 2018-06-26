@@ -1,0 +1,1 @@
+To find the union and intersection of 2 sorted arrays, simply perform a merge operation. While adding any element, check if the preceding element is the same => Union duplicate + Intersection element. So add it to intersection array and not to union as it already is present.

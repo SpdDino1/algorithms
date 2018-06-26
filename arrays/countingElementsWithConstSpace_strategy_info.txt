@@ -1,0 +1,10 @@
+>>Problems<<
+
+https://www.geeksforgeeks.org/find-the-maximum-repeating-number-in-ok-time/
+
+In such problems you are expected to count elements without using a hash map.
+
+>>Strategy<<
+
+>Define the array as an array of float. Then for each occurence of an element 'e', set arr[e]=e+0.1
+>Hence use the fractional part to count

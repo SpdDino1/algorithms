@@ -1,0 +1,10 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
+
+>>Approaches<<
+
+>You could use a linear search and for every element compare it to a global max and min. Hence in the rough overall case you are making 2 comparisons for each element => 2n
+
+>Another approach is to recursively divide the array (from the centre for ease) till it's size reaches <2. If the size is 1 => No comparisons and return min and max as that element. If size is 2 => 1 comparison can decide which is min and max. Now if you have 2 sub arrays from both sides, you will need 1 comparison to decide overall max and 1 comparison to decide overall min.
+This approach reduces the overall comparisons as for 1 and 2 elements, the number of comparisons isn't 2, but 0 and 1 respectively. So the assumption that every element needs 2 comparisons is broken and the number is reduced.

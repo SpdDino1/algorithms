@@ -1,0 +1,17 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/majority-element/
+
+>>Moore's Voting Algorithm<<
+
+
+>Set target=arr[0] and count=1
+
+>Iterate through the array. If index==target, count++. Else count--. 
+If count ever becomes 0 at index i, change target to arr[i] and count=1
+
+>The target remaining at the end of the iteration may or may not be the majority element. If it isn't => there is no majority element!
+
+>>Proof of Working<<
+
+>A majority element occurs >(n/2) times. So however you position the element [All majority element at the right or left or center], your count will be atleast 1 and target will be the majority element. 
