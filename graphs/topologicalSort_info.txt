@@ -1,0 +1,12 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/topological-sorting/
+
+>>Algorithm<<
+
+>Have a hash map called isVisited.
+
+>Start from any arbitrary node and perform DFS. Keep appending to a string every time you encounter an unvisited node. Also update hash map.
+
+>Once you break out of the DFS, check if all nodes have been visited. If not, then start from an unvisited arbitrary node. Keep going into the DFS (Updating the hash and building another secondary string) and when you find a visited node, break out. Prepend the secondary string to teh first created string.
+Again start DFS from an unvisited node ...

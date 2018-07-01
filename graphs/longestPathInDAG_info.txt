@@ -1,0 +1,7 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/find-longest-path-directed-acyclic-graph/
+
+>>Algorithm<<
+
+Apply Bellman-Ford, except that this time prefer heavier weights.

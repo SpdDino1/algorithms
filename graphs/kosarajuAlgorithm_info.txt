@@ -1,0 +1,12 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/strongly-connected-components/
+
+>>Algorithm<<
+
+>Start with a DFS on any arbitrary node [Mark visited nodes and maintain a dfs stack]. The moment you reach a node which has no more children, add it to a separate stack. If you finish your dfs and still have some unvisited nodes, arbitrarily start one from univisited.
+
+>Once complete, reverse all edges.
+
+>Start DFS from the node at the top of the stack. Keep track of all nodes being visited by this DFS. All those nodes fall under one strongly connected group. 
+Now pick the next topmost element. If it has already been visited => Do nothing and simply pop off. Else start a DFS. This is the next strongly connected group

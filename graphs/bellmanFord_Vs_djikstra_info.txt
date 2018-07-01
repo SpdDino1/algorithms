@@ -1,0 +1,12 @@
+>>Djikstra's<<
+
+>This algo works like prim, by continuously selecting the least weighing path from start node to build up a tree that eventually would connect all nodes.
+
+>>Comparison<<
+
+>Djikstra doensn't revisit already visited nodes, unlike Bellman Ford. If you make a change in the distance hash map of Bellman Ford, you are compelled to run throught the whole graph again. But in Djikstra you keep going forward building the tree.
+
+>Hence Bellman Ford can handle negative edges, as a change in a node's distance, will eventually penetrate to all other edges connected to that node as another iteration will be performed due to that change. But in Djikstra, if a negative edge to an already visited node is encountered, that negative edge will not be considered at all as the vertex it points too is already visited!
+Hence Djikstra will only work with positive edges. In a positive scenario, if an edge is pointing to an already visited vertex => You will first have to go to the node that edge originates from and then add the edge's weight to reach the target node. But since all values are positive, the weight will ALWAYS INCREASE. So Djikstra will work here.
+
+https://stackoverflow.com/questions/13159337/why-doesnt-dijkstras-algorithm-work-for-negative-weight-edges

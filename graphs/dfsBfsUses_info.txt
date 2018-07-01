@@ -1,0 +1,7 @@
+>>Detect whether a graph has a cycle<<
+
+>Perform a DFS or BFS. You will know cycle exists if repeated element is found again in stack/queue
+
+>>Check if a path exists between 2 nodes in a graph<<
+
+>Take the source node as one of the nodes in the pair and start a DFS/BFS. If you reach the other node => some path exists

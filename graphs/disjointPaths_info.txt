@@ -1,0 +1,9 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/find-edge-disjoint-paths-two-vertices/
+
+>>Algorithm<<
+
+>Perform a DFS starting from the source node. In the DFS if you reach the destination node => You have found a path between source and sink. Now delete this path from graph.
+
+>Keep performing DFS from source, check if you can reach sink an delete. The number of times you run DFS gives you the number of disjoint paths available. [Disjoint paths do not even share a single edge in common. Hence this algo works]
