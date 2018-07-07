@@ -1,0 +1,31 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/median-of-stream-of-integers-running-integers/
+
+>>Algorithm<<
+
+>Here we use 2 heaps. 
+	a) Max heap that contains the lower half of numbers (Less than)
+	b> Min heap that contains the upper half of numbers (Greater than)
+
+>Initially both heaps are empty
+
+>The first element is put in the lower heap. Now the difference in sizes between the heaps is 1.
+
+>If the next element is larger than the lower heap's root => It should go to the upper half heap. This is because the lower half heap is a max-heap. So if the element is larger than root => It cannot belong to that heap! In this case the difference in sizes between the heaps is zero. 
+If the element were actually less than the root => It belongs to lower heap! So place it in root position and run Heapify(). But now difference between heap sizes is 2. This cannot be tolerated! Heap Difference <=1. 
+So we pick the root of max-heap (After Heapify()) and push it to the greater than heap. place it in root and run Heapify() [Ideally nothing should change as this is a min-heap and the added element is indeed less than all elements in this heap]. Now difference is back to 1.
+
+>At any point of time if you want to find the median,
+	a)If the heap difference is zero => There are even number of elements => Median = Avg of the roots of both heaps [Even case]
+	b)If the heap difference is 1 => There are odd number of elements => Median = Root of heap with more number of elements [Odd Case]
+
+>Hence keep adding to heaps, balancing and obtaining median as the stream flows
+
+>>Working Principle<<
+
+>What we are essentially doing here is just keeping track of middle elements. The heaps act as buckets. One stores the lower half while the other stores the upper half. The roots are guaranteed to be the middle elements as the difference in sizes of the heap is strictly <=1. 
+
+>Hence in even case we average the roots (The middle elements) and in odd case we pick the root of the heap with more elements (Middle element)
+
+>Hence we keep the whole stream 'somewhat' sorted.....[Complete sorting is unnecessary as we are just interested in the middle elements]

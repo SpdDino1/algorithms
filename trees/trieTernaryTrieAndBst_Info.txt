@@ -2,7 +2,7 @@
 
 >A balanced bst is a data structure that starts from the middle and assumes that the left is less and the right is more. Sort of like the assumption made in quicksort. Hence this is useful for finding elements from the middle
 
->A trie is a DS that starts from one end and progresses towards the other...sort of like radix sort assumption. Hence this is useful for storing strings, dictionaries etc: A trie is helps ocnserve space by allowing you to use common prefixes to store strings and not replicate them. 
+>A trie is a DS that starts from one end and progresses towards the other...sort of like radix sort assumption. Hence this is useful for storing strings, dictionaries etc: A trie is helps conserve space by allowing you to use common prefixes to store strings and not replicate them. 
 >A standard trie has 26 child pointers for each alphabet. This helps ensure O(1) search time (Combined with the intelligent index access technique [refer trie.cpp]) but puts a huge space overhead.
 
 >A BST is more space efficient as it doesnt have 26 child pointers, however it takes longer to search for stored words (https://stackoverflow.com/questions/14042955/binary-search-tree-with-strings) Plus you can't use common prefixes in a BST....hence it's a pain to store strings.

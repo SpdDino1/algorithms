@@ -1,0 +1,30 @@
+>>Problems<<
+
+https://www.geeksforgeeks.org/given-a-set-of-line-segments-find-if-any-two-segments-intersect/
+
+>>Algorithm<<
+
+Now whil we are checking if any 2 lines intersect, there is no necessity to check for all other lines for every given line. Let's say a line has a length of 2 and spans from (0,0) to (2,0). This line will obviously not intersect with any other line after the coordinate (2,0). Hence this is the start of the optimization.
+
+>Sort all given points wrt to x coordinate. Also have a flag with each point that tells whether it is the start of a line segment or end. Start scanning from origin towards right.
+Have an array called 'activeSegments' that stores the start points of any line segment. Hence this array holds all the line segments which still have to be 'sweeped' and whose length is less than sweep distance.
+
+>When you insert a new point in the active array, check if the line segment to which that point belongs intersects with the segment just above it (In the active array). 
+
+>When you encounter a right most point of a line segment => The length of the line segment is exhausted => It need be taken into consideration for future intersections as this line segment cannot intersect with any new segment arriving in the future. Now you must delete this segment from active array.
+>Whenever you delete a segment from the array , check whether the line segment jsut above and below the segment to be deleted intersect.
+
+>>Keep sweeping
+
+>>Working Principle<<
+
+Let's say line segment A and B intersect somewhere => At some point of time, A and B have to be adjacent to each other in the active array! This because an intersection point can only have 2 line segments AT THAT POINT and NOTHING ELSE IN BETWEEN. 
+
+That's the reason why we check only the line segments just before and after...and not the full array.
+
+>>Complexity<<
+
+Sorting = n lgn
+Sweeping = n
+
+Overall = O(nlgn)

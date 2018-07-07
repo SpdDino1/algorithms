@@ -1,0 +1,16 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/check-if-two-given-line-segments-intersect/
+
+>>Algorithm<<
+
+>Calculate the slope of both lines (y2-y1)/(x2-x1)
+
+>If m1 == m2 ==> They do not intersect [If the 2 line segments are part of the same line too this algo would say they don't intersect..]
+
+>If slopes are different => they 'might' intersect. !!Remember we are dealing with line segments...not lines!!
+Find an x and y value of intersection point. Construct line equations for both lines in terms of x. Then find 'x' from this. Then using any one of the above line equation in terms of x, subst the found 'x' to obtain the required y.
+
+>Now find the length of both line 1 [sqrt(pow(x1-x2,2)+pow(y1-y2,2))]. Then find distance of POI from point 1 and 2. Add them up and check if it equals full line's length. If yes => POI is contained by line segment.
+Repeat this process for line 2.
+If contained by both => Line segments intersect 

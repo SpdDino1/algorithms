@@ -22,7 +22,7 @@ Here 10 would be extracted and would be swapped by 5(2). Hence 5(2) will appear 
 
 K Way Merge
 
->This is the tournament tree algo to merge many sorted arrays into 1.
+>This is the tournament tree algo to merge many sorted arrays into 1. It uses a heap. Refer k way in heap directory.
 
 External Merge sort
 
@@ -47,4 +47,4 @@ External Distribution Sort
 >This is analogous to quicksort. Here a pivot is randomly chosen from the dataset and the dataset is split into 2 approximate halves, where the left is lesser than pivot and right greater. This is recursively done till the chunk now can be fit in RAM and sorted. 
 >Here no merging is required as naturally the left is lesser and right greater.
 
->The swapping of elements after choosing a pivot can be done in disk itself (With pointers moving left and right), or there could be buffers in RAM that coudl store a part of the dataset. Once the buffer is exhausted (left pointer has hit buffer's right bound or right pointer has hit buffer's left bound), the next part of the dataset can be loaded.
+>The swapping of elements after choosing a pivot can be done in disk itself (With pointers moving left and right), or there could be buffers in RAM that could store a part of the dataset. Once the buffer is exhausted (left pointer has hit buffer's right bound or right pointer has hit buffer's left bound), the next part of the dataset can be loaded.

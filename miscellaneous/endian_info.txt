@@ -1,0 +1,15 @@
+>Endianness is merely a byte ordering issue.
+
+Consider a hexadecimal number 12345678 => 4 bytes [2 hex digits occupy 8bits == 1 byte]
+
+(Big Endian Order)	Ram Address			Value 
+[Start from MSB]		100				 12	
+						101				 34
+						102              56
+						103              78
+
+(Little Endian Order)	Ram Address			Value 
+[Start from LSB]			100				 78	
+							101				 56
+							102              34
+							103              12

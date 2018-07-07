@@ -1,0 +1,14 @@
+>>Problem<<
+
+https://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/
+
+>>Algorithm<<
+
+>Create a separate array of petrol loss and profit. For example, let's say a pump has a distance value of 4 but a petrol value of 3 => After the journey from this pump, this pump actually costs you a loss of -1 petrol units.
+
+>So for {4, 6}, {6, 5}, {7, 3} and {4, 5} => [Profit/Loss Array] {-1,-1,4,-1}
+
+>Now you do something similar to Kadane's algorithm. Fix start as index 0 and keep going through the array while your tank is never negative. You may stop if you reach start again.
+>Midway if your tank reaches a negative value => Your initial start was wrong. So fix start as the next station from where you stopped and restart iteration.
+
+>If you ever reach a condition where your new start value is pointing to a station where you had started from earlier => There is no answer possible. So you'll have to store previously started from stations .... preferably in a hashmap
