@@ -1,0 +1,7 @@
+>>Macros<<
+
+They are the #define statements written to define some placeholders and their replacement text. They are also called 'Preprocessor Directives' as they are evaluated before compile time of the rest of the program.
+
+You can use Macros as means to replace placeholders. But they can also handle conditional statements. So your code could have parts that get triggered (Compiled) only when a condition passes, else that code won't even be compiled!
+
+https://www.qctutorials.com/learning/cplusplus/cpp_preprocessor.html

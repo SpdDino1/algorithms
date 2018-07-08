@@ -1,0 +1,7 @@
+>>Friend Function & Classes<<
+
+A friend function is a function written in another class that can access the private data attributes of another class (Where it has been explicitly given 'friend' status)
+
+Other methods in the class containing the friend method may not access the data attributes.
+
+A friend class is another class (And methods) that can access the private data attributes of another class (Where it has been explicitly given 'friend' status)

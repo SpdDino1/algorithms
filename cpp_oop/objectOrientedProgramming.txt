@@ -1,0 +1,20 @@
+>>OOP<<
+
+>It is a programming paradigm where you view data as objects, bound by their classes and that can be operated by methods. Hence you solve problems by running methods over objects and relating objects from various classes.
+
+>>Key Features of OOP<<
+
+>Encapsulation: 
+	>This is the concept where data is neatly packed within classes and there are methods that help you operate on the object. Hence everything is kept organized in classes.
+	>Data can also be given restriction wrt to access to make it more secure from other classes. This move helps reduce vulnerabilities while developing.
+
+	>In simple terms its wrapping everything into one tight unit and aiding increased security.
+
+>Abstraction
+	>This is the idea of keeping all implementations hidden and only focus on what has to be achieved. This enables simplicity while developing.
+
+>Polymorphism
+	>This is the idea of allowing a same 'name' or 'entity' to perform multiple things, depending on the context at which it is envoked. for instance an operator can be overloaded and a function can be overriden (By sub classes) or overloaded (if parameter count is deifferent in each duplicate)
+
+>Inheritance
+	>This is the idea of code reusibility where child classes can directly inherit (and change) implementations in their parent classes.

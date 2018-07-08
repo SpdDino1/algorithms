@@ -1,0 +1,9 @@
+>>Function Overloading<<
+
+It is the process of declaring numerous implementations of the same function, except that each declaration has different parameter types or counts or both. Each declaration can also have different return values.
+
+Hence this supports the Polymorphism concept that OOP holds.
+
+>>Function Overriding<<
+
+It is the phenomenon where a derived class overrides the implementation of a function in its Base class and gives a new implementation instead.

@@ -1,0 +1,7 @@
+>>Modifiers<<
+
+These are prefixes added to data types to get more control over the amount of space they occupy.
+
+>>Short => Half the usual size the data type occupoes
+
+>>Long => double the usual size of the data type

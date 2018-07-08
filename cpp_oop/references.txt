@@ -1,0 +1,5 @@
+>>References<<
+
+https://www.qctutorials.com/learning/cplusplus/cpp_references.html
+
+References are like pointers that can only point to a particular address throughout their lifetime.

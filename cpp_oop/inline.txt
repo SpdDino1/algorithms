@@ -1,0 +1,5 @@
+>>Inline<<
+
+Generally when a function is called, it is alotted space in the function stack, local variables are saved and then the function is triggered. This causes some time to be spent.
+
+However if your function is actually pretty small and doesn't do anything complex, you could give it the inline keyword. The inline keyword forces the c++ compiler to replace all function calls in the code with the actual function definition. So now it looks like you've copy pasted the definition everywhere instead of calling the function. So now there's no stack allotment, variable storing etc: and is hence faster.

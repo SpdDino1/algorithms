@@ -1,0 +1,5 @@
+>>Templates<<
+
+Sometimes you might have a class or a function where you aren't sure of what data type is being passed as input...but the method has to do the same operations on it nevertheless. Hence you can take in data type itself as an input => Templating.
+
+https://www.geeksforgeeks.org/templates-cpp/

@@ -1,0 +1,21 @@
+>>Virtual Function<<
+
+Let's say you have 2 classes, Base and Derived. 
+
+Base has 2 functions, virtual and unvirtual. The derived class overrides both these methods.
+
+Create an object of Derived. Now declare a Base object and cast the Derived object to it (Point Base object pointer to the address of derived object)
+
+If i call the base class' virtual and unvirtual methods, i get the derived implementation of virtual whereas the base class; implementation of unvirtual.
+
+Hence virtual functions are functions written in the Base class that you know will be overriden in the derived classes. however unlike a pure virtual function, virtual functions can have implementations in the Base itself and an updated definition in the derived class.
+
+https://msdn.microsoft.com/en-us/library/0y01k918.aspx
+
+>>However if you use the '::' scope resolution operator, you can explicitly call the targetted implementation and override the virtuality feature.
+
+>>Pure Virtual Functions<<
+
+Pure virtual functions are functions that are not at all derived in the Base class....in other words, they are abstract methods. A class containing a pure vitual function is an abstract class. In Java, an interface contains only abstract methods.
+
+An interface is a convinent way of enforcing rules on classes that wish to implement them. Once implemented, data transfer and interaction between 2 objects of interfaced classes becomes easy [Provided the interface was designed with data transfer in mind] 

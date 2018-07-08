@@ -1,0 +1,3 @@
+>>Memory Allocation<<
+
+Memory is generally allotted in the stack and heap, both of which are present in the RAM. Stack is used for static memory allocation (Variables already defined in the code) and is relativley fast to access as it is done befre compile time. Heap is used for dynamic memory allocation and is relatively slow compared to stack allocation.

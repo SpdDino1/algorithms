@@ -1,0 +1,7 @@
+>>Type Qualifiers<<
+
+These are extra keywords preceeding a data type declaration that help convey to the compiler how to perform optimizations.
+
+>Const keyword tells the compiler that the particular variable cannot be changed in value
+
+>volatile tells the compiler that there will be changes on the variable (From means the compiler may not be aware of) and to take care while optimizing [https://stackoverflow.com/questions/4437527/why-do-we-use-volatile-keyword-in-c]
