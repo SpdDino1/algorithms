@@ -1,0 +1,15 @@
+https://puzzlefry.com/puzzles/gold-coins-puzzle/
+
+>>Solution<<
+
+Let's say the pirates were Cap, 1, 2,3,4 (Order of captains in that order)
+
+If only 3,4 existed, 3 would become captain and propose to take all 100 coins and give none to 4. He votes for himself and claims majority.
+
+If only 2,3,4 existed, 2 would become captain. He would give 1 coin to 4 and take 99 coins. He would tell 4 that if he did not vote for his plan, the above scenario would happend and he would go coinless. So with 2 and 4, he claims majority.
+
+If only 1,2,3,4 existed, 1 would become captain. He would give 3 a coin and claim 99 coins. He would tell 3 that if he did not vote for him, the above scenario would happen and he would go coinless. So with 1 and 3 he claims the majority.
+
+If Cap, 1, 2,3,4, Cap would give 1 coin to 2 and 1 coin to 4. He would tell them that if they didn't vote for him they would go coinless as in the above scenario. 
+
+Hence cap can get 98 coins at max without risk 

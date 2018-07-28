@@ -1,5 +1,7 @@
 >>Storage Classes<<
 
+https://www.tutorialspoint.com/cplusplus/cpp_storage_classes.htm
+
 A Storage class refers to the scope and life-span within a program.
 
 >auto
@@ -16,7 +18,7 @@ It is stored in RAM and dies only when the whole program dies, not when the func
 
 If a static variable is declared within a function with a value of 2, but later on changes to 3. If the function dies and is called again, the variable stil holds the value 3 and doesn't start over from 2....as it is static and is actually declared only once.
 
-static varialbes in classes are actually class variables as they are initialized only once and are shared by all objects.
+static variables in classes are actually class variables as they are initialized only once and are shared by all objects.
 
 >extern
 
@@ -25,5 +27,3 @@ This is a storage class used to point to a variable present in another c++ progr
 >mutable
 
 This explicitly says that 'const' functions [Functions that aren't actually supposed to change any class data value] can change the data attribute bearing the 'mutable' keyword
-
-https://www.tutorialspoint.com/cplusplus/cpp_storage_classes.htm
